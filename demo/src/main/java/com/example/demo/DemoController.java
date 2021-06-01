@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.miracom.oneoone.transceiverx.Transceiver;
-
 /**
 * <pre> 
 * simple : 계좌 Controller Module.
@@ -32,13 +30,8 @@ import com.miracom.oneoone.transceiverx.Transceiver;
 @RestController
 public class DemoController {
 
-	private Transceiver transceiver ;
-	
 	@RequestMapping(value = "test")
 	public @ResponseBody String test(@RequestParam HashMap<String, Object> reqMap) throws Exception {
-		
-		transceiver = new Transceiver(null, 0);
-		System.out.println("transceiver=="+transceiver);
 		
 		return "welcome";
 	}
