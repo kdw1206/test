@@ -32,7 +32,7 @@ public class DemoController {
 
 	@RequestMapping(value = "test")
 	public @ResponseBody String test(@RequestParam HashMap<String, Object> reqMap) throws Exception {
-		
+		 
 		return "welcome";
 	}
 	
